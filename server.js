@@ -1,0 +1,15 @@
+const express = require('express');
+const webpack = require('webpack');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+
+const app = express();
+const config = require('./webpack.config.js');
+const compiler = webpack(config);
+
+app.use(webpackDevMiddleware(compiler, {
+
+}));
+
+app.listen(3000, () => {
+    console.log('server is listening on 3000');
+});
