@@ -21,10 +21,22 @@ module.exports = {
       exclude: /node_modules/, 
       loader: "babel-loader",
       options: {
-        presets: [['@babel/preset-env', {
-          useBuiltIns: 'usage'
-        }]]
-      }
+        // presets: [['@babel/preset-env', {
+        //   useBuiltIns: 'usage'
+        // }]],
+        plugins: [
+          [
+            "@babel/plugin-transform-runtime",
+            {
+              "absoluteRuntime": false,
+              "corejs": 2,
+              "helpers": true,
+              "regenerator": true,
+              "useESModules": false
+            }
+          ]
+        ]
+      },
     }, {
       test: /\.jpg$/,
       use: {
