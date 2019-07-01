@@ -56,11 +56,17 @@
 
 // import "@babel/polyfill";
 
-const arr = [
-  new Promise(() => {}),
-  new Promise(() => {})
-];
+// const arr = [
+//   new Promise(() => {}),
+//   new Promise(() => {})
+// ];
 
-arr.map((item) => {
-  console.log(item);
-});
+// arr.map((item) => {
+//   console.log(item);
+// });
+
+
+
+// Tree Shaking
+import { add } from './math.js';
+add(1, 2);

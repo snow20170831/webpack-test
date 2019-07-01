@@ -79,7 +79,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   optimization: {
-    usedExport: true
+    usedExports: true 
   },
   output: {
     filename: '[name].js',
