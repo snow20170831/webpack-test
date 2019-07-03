@@ -15,18 +15,18 @@ module.exports = {
         // presets: [['@babel/preset-env', {
         //   useBuiltIns: 'usage'
         // }]],
-        plugins: [
-          [
-            "@babel/plugin-transform-runtime",
-            {
-              "absoluteRuntime": false,
-              "corejs": 2,
-              "helpers": true,
-              "regenerator": true,
-              "useESModules": false
-            }
-          ]
-        ]
+        // plugins: [
+        //   [
+        //     "@babel/plugin-transform-runtime",
+        //     {
+        //       "absoluteRuntime": false,
+        //       "corejs": 2,
+        //       "helpers": true,
+        //       "regenerator": true,
+        //       "useESModules": false
+        //     }
+        //   ]
+        // ]
       },
     }, {
       test: /\.jpg$/,
