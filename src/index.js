@@ -68,5 +68,31 @@
 
 
 // Tree Shaking
-import { add } from './math.js';
-add(1, 2);
+// import { add } from './math.js';
+// add(1, 2);
+
+
+
+
+// Code Splitting
+/**
+ * 第一种方式
+ * 首次访问页面时，加载main.js (2mb)
+ * 当页面业务逻辑发生变化时，又要加载2mb的内容
+ *  */
+
+ /**
+ * 第二种方式
+ * main.js被拆分成 lodash.js(1mb), main.js(1mb)
+ * 当业务逻辑发生变化时，只要加载main.js即可 (1mb)
+ * */
+
+// 同步加载
+import _ from 'lodash';
+
+// 业务逻辑1mb
+console.log(_.join(['a', 'b', 'c'], '***'));
+console.log(_.join(['a', 'b', 'd'], '***'));
+
+
+ 

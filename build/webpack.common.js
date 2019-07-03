@@ -68,6 +68,11 @@ module.exports = {
     new HtmlWebpackPlugin({template: 'src/index.html'}),
     new CleanWebpackPlugin({cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, '../dist')]}),
   ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, '../dist')
