@@ -1,9 +1,10 @@
 {
-    presets: [
+    "presets": [
       [
         "@babel/preset-env", {
           "useBuiltIns": "usage"
         }
       ]
-    ]
+    ],
+    "plugins": ["dynamic-import-webpack"]
   }
