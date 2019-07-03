@@ -66,10 +66,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({template: 'src/index.html'}),
-    new CleanWebpackPlugin({cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, 'dist')]}),
+    new CleanWebpackPlugin({cleanOnceBeforeBuildPatterns: [path.resolve(__dirname, '../dist')]}),
   ],
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, '../dist')
   }
 }
