@@ -97,7 +97,7 @@
 
  // 异步加载
  function getComponent() {
-     return import('lodash').then(() => {
+     return import(/* webpackChunkName: "lodash" */ 'lodash').then(() => {
          var element = document.createElement('div');
          element.innerHTML = _.join(['code', 'splitting'], '-');
          return element;
